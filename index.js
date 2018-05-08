@@ -1,5 +1,5 @@
 'use strict';
 
-var ravencore = require('ravencore-lib');
+var cryptorescuecore = require('cryptorescuecore-lib');
 
-module.exports = ravencore;
+module.exports = cryptorescuecore;

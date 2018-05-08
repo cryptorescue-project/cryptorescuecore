@@ -1,8 +1,8 @@
 {
-  "name": "ravencore",
-  "main": "./ravencore.min.js",
+  "name": "cryptorescuecore",
+  "main": "./cryptorescuecore.min.js",
   "version": "0.13.5",
-  "homepage": "https://github.com/underdarkskies",
+  "homepage": "https://github.com/cryptorescue-project",
   "authors": [
     "BitPay, Inc."
   ],
@@ -11,8 +11,8 @@
     "globals"
   ],
   "keywords": [
-    "ravencoin",
-    "ravencore",
+    "cryptorescue",
+    "cryptorescuecore",
     "btc",
     "satoshi"
   ],

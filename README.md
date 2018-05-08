@@ -1,16 +1,12 @@
-Ravencore
+CryptoRescueCore
 =======
 
-This is Unders fork of Bitpay's Bitcore that uses Ravencoin 0.15.0. It has a limited segwit support.
-
-It is HIGHLY recommended to use https://github.com/underdarkskies/ravencore-deb to build and deploy packages for production use.
-
-Bitpay's Bitcore has diverged from our code with their recent rewrites and refactors (for example, added bcoin for transaction parsing); we do not plan to merge the big refactors back here. (see https://github.com/bitpay/bitcore )
+We want to thank everyone from the [Raven community](https://www.ravencoin.org/) for the opportunity to fork this to further the production of x16s versions. To see  the original product, go to the [Ravencoin Dev Version](https://github.com/underdarkskies/ravencore) and support the efforts of the devs.
 
 ----
 Getting Started
 =====================================
-Deploying Ravencore full-stack manually:
+Deploying CryptoRescueCore full-stack manually:
 ----
 ````
 ##(add Unders key)##
@@ -25,25 +21,25 @@ $curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh |
 $nvm install stable
 $nvm install-latest-npm
 $nvm use stable
-$git clone https://github.com/underdarkskies/ravencore.git
-$npm install -g ravencore --production
+$git clone https://github.com/cryptorescue-project/cryptorescuecore.git
+$npm install -g cryptorescuecore --production
 ````
-Copy the following into a file named ravecore-node.json and place it in ~/.ravencore/
+Copy the following into a file named ravecore-node.json and place it in ~/.cryptorescuecore/
 ````json
 {
   "network": "livenet",
   "port": 3001,
   "services": [
-    "ravend",
+    "cryptorescued",
     "web",
     "insight-api",
     "insight-ui"
   ],
   "servicesConfig": {
-    "ravend": {
+    "cryptorescued": {
       "spawn": {
-        "datadir": "/home/<yourusername>/.ravencore/data",
-        "exec": "/home/<yourusername>/ravencore/node_modules/ravencore-node/bin/ravend"
+        "datadir": "/home/<yourusername>/.cryptorescuecore/data",
+        "exec": "/home/<yourusername>/cryptorescuecore/node_modules/cryptorescuecore-node/bin/cryptorescued"
       }
     },
     "insight-ui": {
@@ -56,41 +52,20 @@ Copy the following into a file named ravecore-node.json and place it in ~/.raven
   }
 }
 ````
-Launch your copy of ravencore:
+Launch your copy of cryptorescuecore:
 ````
-$ravencored
+$cryptorescuecored
 ````
-You can then view the Ravencoin block explorer at the location: `http://localhost:3001`
+You can then view the CryptoRescue block explorer at the location: `http://localhost:3001`
 
-Undeploying Ravencore full-stack manually:
+Undeploying CryptoRescueCore full-stack manually:
 ----
 ````
 $nvm deactivate
 $nvm uninstall stable
-$rm -rf .npm .node-gyp ravencore
-$rm .ravencore/data/raven.conf .ravencore/ravencore-node.json
+$rm -rf .npm .node-gyp cryptorescuecore
+$rm .cryptorescuecore/data/cryptorescue.conf .cryptorescuecore/cryptorescuecore-node.json
 ````
-
-## Applications
-
-- [Node](https://github.com/underdarkskies/ravencore-node) - A full node with extended capabilities using Ravencoin Core
-- [Insight API](https://github.com/underdarkskies/insight-api) - A blockchain explorer HTTP API
-- [Insight UI](https://github.com/underdarkskies/insight) - A blockchain explorer web user interface
-- (to-do) [Wallet Service](https://github.com/underdarkskies/ravencore-wallet-service) - A multisig HD service for wallets
-- (to-do) [Wallet Client](https://github.com/underdarkskies/ravencore-wallet-client) - A client for the wallet service
-- (to-do) [CLI Wallet](https://github.com/underdarkskies/ravencore-wallet) - A command-line based wallet client
-- (to-do) [Angular Wallet Client](https://github.com/underdarkskies/angular-ravencore-wallet-client) - An Angular based wallet client
-- (to-do) [Copay](https://github.com/underdarkskies/copay) - An easy-to-use, multiplatform, multisignature, secure ravencoin wallet
-
-## Libraries
-
-- [Lib](https://github.com/underdarkskies/ravencore-lib) - All of the core Ravencoin primatives including transactions, private key management and others
-- (to-do) [Payment Protocol](https://github.com/underdarkskies/ravencore-payment-protocol) - A protocol for communication between a merchant and customer
-- (to-do) [P2P](https://github.com/underdarkskies/ravencore-p2p) - The peer-to-peer networking protocol
-- (to-do) [Mnemonic](https://github.com/underdarkskies/ravencore-mnemonic) - Implements mnemonic code for generating deterministic keys
-- (to-do) [Channel](https://github.com/underdarkskies/ravencore-channel) - Micropayment channels for rapidly adjusting ravencoin transactions
-- [Message](https://github.com/underdarkskies/ravencore-message) - Ravencoin message verification and signing
-- (to-do) [ECIES](https://github.com/underdarkskies/ravencore-ecies) - Uses ECIES symmetric key negotiation from public keys to encrypt arbitrarily long data streams.
 
 ## Documentation
 
@@ -103,19 +78,20 @@ To get community assistance and ask for help with implementation questions, plea
 
 ## Security
 
-We're using Ravencore in production, as are [many others](http://bitcore.io#projects), but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
+We're using CryptoRescueCore in production, as are [many others](http://bitcore.io#projects), but please use common sense when doing anything related to finances! We take no responsibility for your implementation decisions.
 
 If you find a security issue, please email security@bitpay.com.
 
 ## Contributing
 
-Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/underdarkskies/ravencore/blob/master/CONTRIBUTING.md) file.
+Please send pull requests for bug fixes, code optimization, and ideas for improvement. For more information on how to contribute, please refer to our [CONTRIBUTING](https://github.com/cryptorescue-project/cryptorescuecore/blob/master/CONTRIBUTING.md) file.
 
 To verify signatures, use the following PGP keys:
 - @underdarkskies: http://pgp.mit.edu/pks/lookup?op=get&search=0x009BAB88B3BD190C `EE6F 9673 1EF6 ED85 B12B  0A3F 009B AB88 B3BD 190C`
 
 ## License
 
-Code released under [the MIT license](https://github.com/underdarkskies/ravencore/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/cryptorescue-project/cryptorescuecore/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc. Bitcore is a trademark maintained by BitPay, Inc.
+Copyright 2018 Ravencoin Developers

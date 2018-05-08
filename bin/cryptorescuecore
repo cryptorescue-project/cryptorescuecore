@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-'use strict';
-
+var cryptorescuecore = require('cryptorescuecore-node/lib/cli/cryptorescuecore');
 var path = require('path');
-var ravencored = require('ravencore-node/lib/cli/ravencored');
 var servicesPath = path.resolve(__dirname, '../');
 var additionalServices = ['insight-api', 'insight-ui'];
-ravencored(servicesPath, additionalServices);
+cryptorescuecore(servicesPath, additionalServices);

@@ -1,5 +1,5 @@
 
 
-var ravencoreTasks = require('ravencore-build');
+var cryptorescuecoreTasks = require('cryptorescuecore-build');
 
-ravencoreTasks();
+cryptorescuecoreTasks();

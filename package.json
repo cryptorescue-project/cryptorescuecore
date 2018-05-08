@@ -1,15 +1,15 @@
 {
-  "name": "ravencore",
+  "name": "cryptorescuecore",
   "version": "4.1.0",
-  "description": "A platform to build ravencoin and blockchain-based applications.",
+  "description": "A platform to build cryptorescue and blockchain-based applications.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/** --recursive"
   },
   "bin": {
-    "ravencore": "./bin/ravencore",
-    "ravencored": "./bin/ravencored"
+    "cryptorescuecore": "./bin/cryptorescuecore",
+    "cryptorescuecored": "./bin/cryptorescuecored"
   },
   "contributors": [
     {
@@ -58,7 +58,7 @@
     }
   ],
   "keywords": [
-    "ravencoin",
+    "cryptorescue",
     "transaction",
     "address",
     "p2p",
@@ -75,16 +75,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/underdarkskies/ravencore.git"
+    "url": "https://github.com/cryptorescue-project/cryptorescuecore.git"
   },
   "browser": {
     "request": "browser-request"
   },
   "dependencies": {
-    "ravencore-lib": "underdarkskies/ravencore-lib",
-    "ravencore-node": "underdarkskies/ravencore-node",
-    "insight-api": "underdarkskies/insight-api",
-    "insight-ui": "underdarkskies/insight-ui"
+    "cryptorescuecore-lib": "cryptorescue-project/cryptorescuecore-lib",
+    "cryptorescuecore-node": "cryptorescue-project/cryptorescuecore-node",
+    "insight-api": "cryptorescue-project/insight-api",
+    "insight-ui": "cryptorescue-prroject/insight-ui"
   },
   "license": "MIT",
   "devDependencies": {

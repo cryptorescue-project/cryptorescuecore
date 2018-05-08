@@ -1,27 +1,27 @@
 'use strict';
 
 var should = require('chai').should();
-var ravencore = require('../');
+var cryptorescuecore = require('../');
 
 describe('Library', function() {
   it('should export primatives', function() {
-    should.exist(ravencore.crypto);
-    should.exist(ravencore.encoding);
-    should.exist(ravencore.util);
-    should.exist(ravencore.errors);
-    should.exist(ravencore.Address);
-    should.exist(ravencore.Block);
-    should.exist(ravencore.MerkleBlock);
-    should.exist(ravencore.BlockHeader);
-    should.exist(ravencore.HDPrivateKey);
-    should.exist(ravencore.HDPublicKey);
-    should.exist(ravencore.Networks);
-    should.exist(ravencore.Opcode);
-    should.exist(ravencore.PrivateKey);
-    should.exist(ravencore.PublicKey);
-    should.exist(ravencore.Script);
-    should.exist(ravencore.Transaction);
-    should.exist(ravencore.URI);
-    should.exist(ravencore.Unit);
+    should.exist(cryptorescuecore.crypto);
+    should.exist(cryptorescuecore.encoding);
+    should.exist(cryptorescuecore.util);
+    should.exist(cryptorescuecore.errors);
+    should.exist(cryptorescuecore.Address);
+    should.exist(cryptorescuecore.Block);
+    should.exist(cryptorescuecore.MerkleBlock);
+    should.exist(cryptorescuecore.BlockHeader);
+    should.exist(cryptorescuecore.HDPrivateKey);
+    should.exist(cryptorescuecore.HDPublicKey);
+    should.exist(cryptorescuecore.Networks);
+    should.exist(cryptorescuecore.Opcode);
+    should.exist(cryptorescuecore.PrivateKey);
+    should.exist(cryptorescuecore.PublicKey);
+    should.exist(cryptorescuecore.Script);
+    should.exist(cryptorescuecore.Transaction);
+    should.exist(cryptorescuecore.URI);
+    should.exist(cryptorescuecore.Unit);
   });
 });
