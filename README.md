@@ -1,7 +1,7 @@
 CryptoRescueCore
 =======
 
-We want to thank everyone from the [Raven community](https://www.ravencoin.org/) for the opportunity to fork this to further the production of x16s versions. To see  the original product, go to the [Ravencoin Dev Version](https://github.com/underdarkskies/ravencore) and support the efforts of the devs.
+We want to thank [UnderDarkSkies](https://www.github.com/underdarkskies/) for the opportunity to fork this to further the production of x16s versions. To see  the original product, go to the [Ravencoin by DarkUnderSkies](https://github.com/underdarkskies/ravencore) and support the efforts of the creator.
 
 ----
 Getting Started
@@ -9,8 +9,8 @@ Getting Started
 Deploying CryptoRescueCore full-stack manually:
 ----
 ````
-##(add Unders key)##
-$gpg --keyserver hkp://pgp.mit.edu:80 --recv-key B3BD190C
+##(add Mafalate's key)##
+$gpg --keyserver hkp://pgp.mit.edu:80 --recv-key 7ED9D83515721F77
 $sudo apt-get update
 $sudo apt-get -y install libevent-dev libboost-all-dev libminiupnpc10 libzmq5 software-properties-common curl git build-essential libzmq3-dev
 $sudo add-apt-repository ppa:bitcoin/bitcoin
