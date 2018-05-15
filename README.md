@@ -76,11 +76,11 @@ If you get the following error:
 ```
 Error: More than one instance of cryptorescuecore-lib found. Please make sure to require cryptorescuecore-lib and check that submodules do not also include their own cryptorescuecore-lib dependency.
 ```
-`
+````
 $cd ~/mynode
 $npm list
 Delete all besides the latest cryptorescuecore-lib.
-`
+````
 ## Documentation
 
 The complete docs are hosted here: [bitcore documentation](http://bitcore.io/guide/). There's also a [bitcore API reference](http://bitcore.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bitcore utility.
