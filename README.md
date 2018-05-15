@@ -23,8 +23,12 @@ $nvm install-latest-npm
 $nvm use stable
 $git clone https://github.com/cryptorescue-project/cryptorescuecore.git
 $npm install -g cryptorescuecore --production
+$git clone https://github.com/cryptorescue-project/cryptorescuecore-node.git
+$npm install -g cryptorescuecore-node --production
+$cd ~/
+$cryptorescuecore-node create mynode
 ````
-Copy the following into a file named cryptorescuecore-node.json and place it in ~/.cryptorescuecore/
+Go to ~/mynode folder and copy the following into a file named cryptorescuecore-node.json
 ````json
 {
   "network": "livenet",
@@ -38,8 +42,8 @@ Copy the following into a file named cryptorescuecore-node.json and place it in 
   "servicesConfig": {
     "cryptorescued": {
       "spawn": {
-        "datadir": "/home/<yourusername>/.cryptorescuecore/data",
-        "exec": "/home/<yourusername>/cryptorescuecore/node_modules/cryptorescuecore-node/bin/cryptorescued"
+        "datadir": "/home/<yourusername>/mynode/data",
+        "exec": "/home/<yourusername>/.nvm/v0.10.48/lib/node_modules/cryptorescuecore-node/bin/cryptorescued"
       }
     },
     "insight-ui": {
@@ -67,6 +71,16 @@ $rm -rf .npm .node-gyp cryptorescuecore
 $rm .cryptorescuecore/data/cryptorescue.conf .cryptorescuecore/cryptorescuecore-node.json
 ````
 
+## Troubleshooting
+If you get the following error:
+```
+Error: More than one instance of cryptorescuecore-lib found. Please make sure to require cryptorescuecore-lib and check that submodules do not also include their own cryptorescuecore-lib dependency.
+```
+`
+$cd ~/mynode
+$npm list
+Delete all besides the latest cryptorescuecore-lib.
+`
 ## Documentation
 
 The complete docs are hosted here: [bitcore documentation](http://bitcore.io/guide/). There's also a [bitcore API reference](http://bitcore.io/api/) available generated from the JSDocs of the project, where you'll find low-level details on each bitcore utility.
