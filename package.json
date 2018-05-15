@@ -84,7 +84,7 @@
     "cryptorescuecore-lib": "cryptorescue-project/cryptorescuecore-lib",
     "cryptorescuecore-node": "cryptorescue-project/cryptorescuecore-node",
     "insight-api": "cryptorescue-project/insight-api",
-    "insight-ui": "cryptorescue-prroject/insight-ui"
+    "insight-ui": "cryptorescue-project/insight-ui"
   },
   "license": "MIT",
   "devDependencies": {
