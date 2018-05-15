@@ -24,7 +24,7 @@ $nvm use stable
 $git clone https://github.com/cryptorescue-project/cryptorescuecore.git
 $npm install -g cryptorescuecore --production
 ````
-Copy the following into a file named ravecore-node.json and place it in ~/.cryptorescuecore/
+Copy the following into a file named cryptorescuecore-node.json and place it in ~/.cryptorescuecore/
 ````json
 {
   "network": "livenet",
