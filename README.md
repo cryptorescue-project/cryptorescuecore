@@ -35,23 +35,24 @@ Go to ~/mynode folder and copy the following into a file named cryptorescuecore-
   "port": 3001,
   "services": [
     "cryptorescued",
-    "web",
     "insight-api",
-    "insight-ui"
+    "insight-ui",
+    "web"
   ],
   "servicesConfig": {
-    "cryptorescued": {
-      "spawn": {
-        "datadir": "/home/<yourusername>/mynode/data",
-        "exec": "/home/<yourusername>/.nvm/v0.10.48/lib/node_modules/cryptorescuecore-node/bin/cryptorescued"
-      }
-    },
     "insight-ui": {
       "routePrefix": "",
       "apiPrefix": "api"
     },
     "insight-api": {
-      "routePrefix": "api"
+      "routePrefix": "api",
+      "enableCache": true
+    },
+    "cryptorescued": {
+      "spawn": {
+        "datadir": "./data",
+        "exec": "/home/<yourusername>/.nvm/versions/node/v4.9.1/lib/node_modules/cryptorescuecore-node/bin/cryptorescued"
+      }
     }
   }
 }
