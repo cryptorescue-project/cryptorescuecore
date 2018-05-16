@@ -17,7 +17,7 @@ $sudo add-apt-repository ppa:bitcoin/bitcoin
 $sudo apt-get update
 $sudo apt-get -y install libdb4.8-dev libdb4.8++-dev
 $curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-##(restart your shell/os)##
+$source ~/.bashrc
 $nvm install stable
 $nvm install-latest-npm
 $nvm use stable
